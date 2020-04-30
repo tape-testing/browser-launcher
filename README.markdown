@@ -3,7 +3,7 @@
 Detect the browser versions available on your system and launch them in an
 isolated profile for automated testing purposes.
 
-You can launch browsers headlessly (if you have Xvfb or with phantom) and set
+You can launch browsers headlessly (if you have Xvfb) and set
 the proxy configuration on the fly.
 
 # example
@@ -45,13 +45,6 @@ $ node example/launch.js
        profile: '/home/substack/.config/browser-launcher/chromium-18.0.1025.168_e025d855',
        command: 'chromium-browser',
        version: '18.0.1025.168' },
-     { name: 'phantom',
-       re: {},
-       type: 'phantom',
-       headless: true,
-       profile: '/home/substack/.config/browser-launcher/phantom-1.4.0_31767fa2',
-       command: 'phantomjs',
-       version: '1.4.0' },
      { name: 'firefox',
        re: {},
        type: 'firefox',
@@ -78,7 +71,7 @@ Launch a new instance of `opts.browser` with the optional version constraint
 `opts.version`. Without an `opts.version`, the highest version of `opts.browser`
 is used.
 
-To launch the browser headlessly (if it isn't already headless like phantom),
+To launch the browser headlessly (if it isn't already headless),
 set `opts.headless`. This launches the browser with
 [node-headless](https://github.com/kesla/node-headless/)
 which uses the `Xvfb` command to create a fake X server.
