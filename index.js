@@ -2,10 +2,8 @@ var config = require('./lib/config');
 var detect = require('./lib/detect');
 var run = require('./lib/run');
 var createProfiles = require('./lib/create_profiles');
-var extend = require('xtend');
 
 var path = require('path');
-var spawn = require('child_process').spawn;
 
 exports = module.exports = function (opts, cb) {
     if (typeof opts === 'function') {
@@ -21,7 +19,7 @@ exports = module.exports = function (opts, cb) {
                 else cb(null, wrap(cfg))
             });
         }
-        else cb(null, wrap(extend(cfg, {isStale: true, configDir: configDir})))
+        else cb(null, wrap(Object.assign({}, cfg, {isStale: true, configDir: configDir})))
     });
     
     function wrap (cfg) {
