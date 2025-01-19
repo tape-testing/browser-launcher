@@ -18,9 +18,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/substack/browser-launcher.git"
+    "url": "git://github.com/bcomnes/browser-launcher.git"
   },
-  "homepage": "https://github.com/substack/browser-launcher",
+  "homepage": "https://github.com/bcomnes/browser-launcher",
   "keywords": [
     "browser",
     "headless",
